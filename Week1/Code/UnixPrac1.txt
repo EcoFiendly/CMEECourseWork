@@ -1,0 +1,31 @@
+# Author: Yewshen Lim y.lim20@imperial.ac.uk
+# Script: UnixPractical.txt
+# Desc: Bash commands to count lines, sequence and base pair ratios. 
+# Arguments: none
+# Date: Oct 2020
+
+#1 Count how many lines there are in each file
+
+find ../Data/ -type f -name "*.fasta" -exec wc -l {} \;
+
+#2 Print everything starting from the second line for the E. coli genome
+
+tail -n +2 ../Data/E.coli.fasta
+
+#3 Count the sequence length of this genome
+
+tail -n +2 ../Data/E.coli.fasta | tr -d '\n' | wc -m
+
+#4 Count the matches of a particular sequence, "ATGC" in the genome of E. coli 
+# (hint: Start by removing the first line and removing newline characters)
+
+tail -n +2 ../Data/E.coli.fasta | tr -d '\n' | grep -o "ATCG" | wc -l
+
+#5 Compute the AT/GC ratio. That is, the (A+T)/(G+C) ratio. This is a summary 
+# measure of base composition of double-stranded DNA. DNA from different 
+# organisms and lineages has different ratios of the A-to-T and G-to-C base 
+# pairs. For example DNA from organisms that live in hot springs have a higher 
+# GC content, which takes advantage of the increased thermal stability of the 
+# GC base pair (google "Chargaff's rule").
+
+echo $(tail -n +2 ../Data/E.coli.fasta | tr -d '\n' | grep -o "A\|T" | wc -l) / $(tail -n +2 ../Data/E.coli.fasta | tr -d '\n' | grep -o "G\|C" | wc -l) | bc -l
