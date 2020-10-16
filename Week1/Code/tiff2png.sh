@@ -5,27 +5,29 @@
 # Arguments: 1 tiff file 
 # Date: Oct 2020
 
-if [ "$1" == "" ] # check if an argument is provided
+if [ "$1" == "" ] # check if an argument was provided
 then
     echo "Please enter a tiff file and its path as a cli argument"
-elif [[ "$1" != *.tif ]] # check if argument provided is the right file type
+    exit
+elif [[ "$1" != *.tif ]] # check if argument provided was the right file type
 then
     echo "Please enter a tiff file"
+    exit
 else
     # If tiff file was provided
     for f in $1;
         do
             echo "Converting $f";
             out="${f%tif}png" # replace "tif" with "png"
-            convert "$f" "$out"; # imagemagick command to convert file
-            echo "Moving output to ../Data/"
-            mv $out ../Data/ # moves output to Data directory
+            convert "$f" "$out";
+            echo "Moving output to ../Results/"
+            mv $out ../Results/ # moves output to Results directory
             echo "Done!"
         done
+    exit
 fi
-exit
 
-# another way of writing to consider:
+#example to consider:
 #if [ -f *.tif ]; # looks for tiff files in directory
 #then 
 #    for f in *.tif # for loop to convert the file

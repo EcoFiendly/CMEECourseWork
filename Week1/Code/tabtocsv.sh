@@ -10,16 +10,18 @@
 if [ "$1" == "" ] # check if an argument is provided
 then
     echo "Please enter a tab separated file and its path as a cli argument"
-elif [[ "$1" != *.txt ]] # check if argument provided is the right file type
+    exit
+elif [[ "$1" != *.txt ]]
 then
-    echo "Please enter a txt file"
+    echo "Please enter a txt file" # check if argument was provided and if it was the right file type
+    exit
 else
     # If a txt file is provided
     echo "Creating a comma delimited version of $1 ..."
     out="${1%txt}csv" # replace "txt" with "csv"
     cat $1 | tr -s "\t" "," >> $out # substitute tabs with commas, and saves to output file
-    echo "Moving output to ../Data/"
-    mv $out ../Data/ # moves output to Data directory
+    echo "Moving output to ../Results/"
+    mv $out ../Results/ # moves output to Results directory
     echo "Done!"
+    exit
 fi
-exit
