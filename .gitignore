@@ -1,14 +1,23 @@
+# Whitelist
+!.gitkeep
+!README.md
+!.gitignore
+!/Code
+
+# Blacklist
 *~
 *.tmp
 #comment
 *.py[co]
-Week1/Results/image.png
-Week1/Results/output.txt
-Week1/Results/test.csv
-Week1/Sandbox
-Week1/Results/1800.txt
-Week1/Results/1801.txt
-Week1/Results/1802.txt
-Week1/Results/1803.txt
-Week2/Sandbox
+Sandbox
+Week1/Results/*
 .vscode
+*.pdf
+*~
+*.aux
+*.dvi
+*.log
+*.nav
+*.out
+*.snm
+*.toc
