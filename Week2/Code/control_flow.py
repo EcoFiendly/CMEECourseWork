@@ -63,9 +63,9 @@ def find_all_primes(x=22):
     print("There are %d primes between 2 and %d" % (len(allprimes), x))
     return allprimes
     
-    #lc version:
-    #allprimes = [i for i in range(2, x + 1) if is_prime(i)]
-    #print("There are %d primes between 2 and %d" % (len(allprimes), x))
+    # lc version:
+    # allprimes = [i for i in range(2, x + 1) if is_prime(i)]
+    # print("There are %d primes between 2 and %d" % (len(allprimes), x))
 
 def main(argv):
     print(even_or_odd(22))
