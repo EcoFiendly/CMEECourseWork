@@ -1,3 +1,23 @@
+#!/usr/bin/env python3
+
+"""
+Script that takes DNA sequences as input from a single external file and 
+aligns two DNA sequences such that they are as similar as possible. The best 
+alignment, along with its corresponding score is then saved in a text file to 
+the /Results/ directory. 
+Also for practicing debugging via insertion of breakpoints
+"""
+
+__appname__ = '[align_seqs.py]'
+__author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk)'
+__version__ = '0.0.1'
+__license__ = ""
+
+## Imports ##
+import sys # module to interface our program with the operating system
+
+## Constants ##
+
 # Two example sequences to match
 seq2 = "ATCGCCGGATTACGGG"
 seq1 = "CAATTCGGAT"
@@ -14,6 +34,8 @@ else:
     s1 = seq2
     s2 = seq1
     l1, l2 = l2, l1 # swap the two lengths
+
+## Functions ##
 
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
