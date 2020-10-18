@@ -6,6 +6,12 @@ aligns two DNA sequences such that they are as similar as possible. The best
 alignment, along with its corresponding score is then saved in a text file to 
 the /Results/ directory. 
 Also for practicing debugging via insertion of breakpoints
+
+Script starts by positioning the beginning of the shorter sequence at all 
+positions (bases) of the longer one (the start position), and count the number 
+of bases matched. The alignment with the highest score wins. Ties are possible, 
+in which case, an arbitrary alignment (e.g. first or last) with the highest 
+score is taken.
 """
 
 __appname__ = '[align_seqs.py]'
@@ -15,25 +21,37 @@ __license__ = ""
 
 ## Imports ##
 import sys # module to interface our program with the operating system
+import csv # module to read csv files
 
 ## Constants ##
 
-# Two example sequences to match
-seq2 = "ATCGCCGGATTACGGG"
-seq1 = "CAATTCGGAT"
+# Open csv file for reading
+file1 = open('../Data/sequence.csv', 'r')
+
+# Read csv file
+sequences = csv.reader(file1)
+
+# Populate seqlist, a list with the sequences read from sequence.csv
+seqlist = []
+for row in sequences:
+    seqlist.append(row[0])
 
 # Assign the longer sequence s1, and the shorter to s2
 # l1 is length of the longest, l2 that of the shortest
 
-l1 = len(seq1)
-l2 = len(seq2)
+l1 = len(seqlist[0])
+l2 = len(seqlist[1])
 if l1 >= l2:
-    s1 = seq1
-    s2 = seq2
+    s1 = seqlist[0]
+    s2 = seqlist[1]
 else:
-    s1 = seq2
-    s2 = seq1
+    s1 = seqlist[1]
+    s2 = seqlist[0]
     l1, l2 = l2, l1 # swap the two lengths
+
+# for finding the best match (highest score) for the two sequences
+my_best_align = None
+my_best_score = -1
 
 ## Functions ##
 
@@ -64,15 +82,18 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 # calculate_score(s1, s2, l1, l2, 1)
 # calculate_score(s1, s2, l1, l2, 5)
 
-# now try to find the best match (highest score) for the two sequences
-my_best_align = None
-my_best_score = -1
-
 for i in range(l1): # Note that you just take the last alignment with the highest score
     z = calculate_score(s1, s2, l1, l2, i)
     if z > my_best_score:
         my_best_align = "." * i + s2 # think about what this is doing!
         my_best_score = z 
+
 print(my_best_align)
 print(s1)
 print("Best score:", my_best_score)
+
+# Save output to a text file in /Results/ directory
+sys.stdout = open('../Results/align_seqs_out.txt', 'w')
+print("Best align is:", str(my_best_align))
+print("Best score is:", str(my_best_score))
+sys.stdout.close()
