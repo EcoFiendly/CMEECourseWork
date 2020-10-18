@@ -9,7 +9,6 @@
 if [ "$1" == ""]
 then
     echo "Please provide a file and its path as a cli argument"
-    exit
 else
     # if a file is provided
     NumLines=`wc -l < $1` 
@@ -18,3 +17,4 @@ else
     echo "The file $1 has $NumLines lines"
     echo # returns an empty line for readability
 fi
+exit
