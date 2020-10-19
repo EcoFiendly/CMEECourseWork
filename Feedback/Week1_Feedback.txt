@@ -216,7 +216,7 @@ Please provide two input files and name of the output file
 
 Code ran without errors
 
-Time consumed = 0.00559s
+Time consumed = 0.00617s
 
 ======================================================================
 Inspecting script file tiff2png.sh...
@@ -278,7 +278,7 @@ Please enter a tiff file and its path as a cli argument
 
 Code ran without errors
 
-Time consumed = 0.00565s
+Time consumed = 0.00623s
 
 ======================================================================
 Inspecting script file UnixPrac1.txt...
@@ -495,7 +495,7 @@ Please enter a csv file and its path as a cli argument
 
 Code ran without errors
 
-Time consumed = 0.01284s
+Time consumed = 0.00583s
 
 ======================================================================
 Inspecting script file CompileLaTeX.sh...
@@ -552,7 +552,7 @@ Please provide a LaTeX file (without the extension) and its relative path
 
 Code ran without errors
 
-Time consumed = 0.00651s
+Time consumed = 0.00676s
 
 ======================================================================
 Inspecting script file boilerplate.sh...
@@ -589,7 +589,7 @@ This is a shell script!
 
 Code ran without errors
 
-Time consumed = 0.00870s
+Time consumed = 0.00881s
 
 ======================================================================
 Inspecting script file FirstExample.tex...
@@ -676,7 +676,7 @@ Please enter a tab separated file and its path as a cli argument
 
 Code ran without errors
 
-Time consumed = 0.00829s
+Time consumed = 0.01420s
 
 ======================================================================
 Inspecting script file MyExampleScript.sh...
@@ -713,7 +713,7 @@ Hello mhasoba
 
 Code ran without errors
 
-Time consumed = 0.00525s
+Time consumed = 0.00767s
 
 ======================================================================
 ======================================================================
