@@ -1,8 +1,13 @@
-# Author: Yewshen Lim y.lim20@imperial.ac.uk
-# Script: oaks.py
-# Desc: Finds just taxa that are oak trees from a list of species
-# Arguments:
-# Date: Oct 2020
+#!/usr/bin/env python3
+
+"""
+Finds just taxa that aro oak trees from a list of species using both loops and
+list comprehension
+"""
+
+__appname__ = '[oaks.py]'
+__author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk)'
+__version__ = '0.0.1'
 
 taxa = [ 'Quercus robur',
          'Fraxinus excelsior',
@@ -12,6 +17,9 @@ taxa = [ 'Quercus robur',
        ]
 
 def is_an_oak(name):
+    """
+    Returns True if name starts with 'quercus'
+    """
     return name.lower().startswith('quercus ')
 
 ## Using for loops

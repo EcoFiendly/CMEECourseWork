@@ -1,8 +1,12 @@
-# Author: Yewshen Lim y.lim20@imperial.ac.uk
-# Script: cfexercises2.py
-# Desc: loops and conditionals combined
-# Arguments:
-# Date: Oct 2020
+#!/usr/bin/env python3
+
+"""
+Script illustrates the use of loop and conditionals
+"""
+
+__appname__ = '[cfexercises2.py]'
+__author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk)'
+__version__ = '0.0.1'
 
 for j in range(12):
     if j % 3 == 0:

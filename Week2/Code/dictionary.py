@@ -30,12 +30,18 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 ## Functions ##
 
 def make_di(x=taxa):
+        """
+        Makes a dictionary
+        """
         di = {}
         for i, j in x:
                 di[j] = di.get(j, ()) + (i,)
         return di
 
 def main(argv):
+        """
+        Makes a dictionary from taxa, a list
+        """
         print(make_di(taxa))
         return 0
 

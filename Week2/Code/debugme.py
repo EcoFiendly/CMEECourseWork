@@ -12,6 +12,9 @@ __license__ = ""
 ## Functions ##
 
 def buggyfunc(x):
+    """
+    Buggy function for debugging
+    """
     y = x
     for i in range(x):
         y = y-1

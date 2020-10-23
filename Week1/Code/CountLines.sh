@@ -6,12 +6,12 @@
 # Date: Oct 2020
 
 # Check if a file is provided
-if [ "$1" == ""]
+if [ "$1" == "" ]
 then
     echo "Please provide a file and its path as a cli argument"
 else
     # if a file is provided
-    NumLines=`wc -l < $1` 
+    NumLines=`wc -l < $1`
     # wc -l counts the number of lines
     # < redirects the contents of the file to the stdin of command wc -l
     echo "The file $1 has $NumLines lines"

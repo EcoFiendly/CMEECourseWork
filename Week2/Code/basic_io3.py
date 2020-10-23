@@ -1,8 +1,12 @@
-# Author: Yewshen Lim y.lim20@imperial.ac.uk
-# Script: basic_io3.py
-# Desc: basic storing objects
-# Arguments:
-# Date: Oct 2020
+#!/usr/bin/env python3
+
+"""
+Script illustates basic storage of objects
+"""
+
+__appname__ = '[basic_io3.py]'
+__author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk)'
+__version__ = '0.0.1'
 
 #################################
 # STORING OBJECTS 

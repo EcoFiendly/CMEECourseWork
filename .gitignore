@@ -10,7 +10,7 @@
 #comment
 *.py[co]
 Sandbox
-*/Results/*.txt
+Results
 .vscode
 *.pdf
 *~
@@ -21,3 +21,4 @@ Sandbox
 *.out
 *.snm
 *.toc
+Week2/Data/JustOaksData.csv

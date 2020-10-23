@@ -25,6 +25,9 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 ## Functions ##
 
 def list_out(x = birds):
+    """
+    Uses a for loop to print latin names, common names and mass
+    """
     for row in x:
         print("Latin name: " + row[0])
         print("Common name: " + row[1])
@@ -34,6 +37,9 @@ def list_out(x = birds):
 # Attempt list comprehension when free
 
 def main(argv):
+    """
+    Prints function with argument bird
+    """
     print(list_out(birds))
     return 0
 

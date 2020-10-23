@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Filename: using_name.py
 
 """
 Script is used to illustrate '__name__ == "__main__"'
@@ -15,7 +14,7 @@ skipping the command(s) under the if statement.
 __appname__ = '[using_name.py]'
 __author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk'
 __version__ = '0.0.1'
-__license__ = "License for this code/program"
+__license__ = ""
 
 ## Functions ##
 if __name__ == "__main__":

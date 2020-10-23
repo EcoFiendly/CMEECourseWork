@@ -58,6 +58,22 @@ my_best_score = -1
 # A function that computes a score by returning the number of matches starting
 # from arbitrary startpoint (chosen by user)
 def calculate_score(s1, s2, l1, l2, startpoint):
+    """
+    Computes a score by returning the number of matches starting from an 
+    arbitrary startpoint (chosen by user)
+
+        Parameters:
+            s1 (str): string containing the longer sequence
+            s2 (str): string containing the shorter sequence
+            l1 (int): length of s1
+            l2 (int): length of s2
+            startpoint: arbitrary startpoint chosen by user
+
+        Returns:
+            score (int): number of matches between the sequences
+            matched (str): matched string with * as match and - as no match
+
+    """
     matched = "" # to hold string displaying alignements
     score = 0
     for i in range(l2):

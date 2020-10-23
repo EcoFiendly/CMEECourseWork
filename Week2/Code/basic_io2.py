@@ -1,8 +1,12 @@
-# Author: Yewshen Lim y.lim20@imperial.ac.uk
-# Script: basic_io2.py
-# Desc: basic output
-# Arguments:
-# Date: Oct 2020
+#!/usr/bin/env python3
+
+"""
+Script illustrates basic output
+"""
+
+__appname__ = '[basic_io2.py]'
+__author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk)'
+__version__ = '0.0.1'
 
 #################################
 # FILE OUPUT

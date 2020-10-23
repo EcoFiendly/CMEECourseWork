@@ -42,6 +42,9 @@ def even_or_odd(x=0): # if not specified, x should take value 0
     return "%d is Odd!" % x
 
 def main(argv):
+    """
+    Prints each of the function with given argument
+    """
     print(even_or_odd(22))
     print(even_or_odd(33))
     return 0

@@ -1,8 +1,12 @@
-# Author: Yewshen Lim y.lim20@imperial.ac.uk
-# Script: loops.py
-# Desc: for and while loops
-# Arguments:
-# Date: Oct 2020
+#!/usr/bin/env python3
+
+"""
+Script illustrates for and while loops
+"""
+
+__appname__ = '[loops.py]'
+__author__ = 'Yewshen Lim (y.lim20@imperial.ac.uk)'
+__version__ = '0.0.1'
 
 # FOR loops in python
 for i in range(5):
