@@ -8,7 +8,7 @@
 # p0 = initial population density
 # r = intrinsic growth rate
 # K = carrying capacity of the environment
-# sigma = 
+# sigma = environmental process noise s.d.
 #
 # OUTPUT
 # density of population after a number of generations
