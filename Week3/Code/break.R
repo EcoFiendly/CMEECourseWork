@@ -1,3 +1,9 @@
+# Author: Yewshen Lim (y.lim20@imperial.ac.uk)
+# Script: break.R
+# Created: Oct 2020
+#
+# Script demonstrates how to break out of a loop
+
 ## breaking out of a loop ##
 
 i <- 0 #Initialize i

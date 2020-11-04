@@ -9,6 +9,7 @@
 # r = intrinsic growth rate
 # K = carrying capacity of the environment
 # sigma = environmental process noise s.d.
+# numyears = number of years to loop over
 #
 # OUTPUT
 # density of population after a number of generations
@@ -44,7 +45,7 @@ stochrickvect <- function(p0=runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,
     N <- matrix(NA, numyears, length(p0))
     # p0 is the starting number across all populations
     N[1, ] <- p0
-    # how to vectorize
+    # how to vectorize:
     # can vectorize across all populations, but not within the populations
     # this is because all populations are independent
     # but within populations, there is dependency, N(t + 1) comes from N(t)

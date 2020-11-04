@@ -1,3 +1,9 @@
+# Author: Yewshen Lim (y.lim20@imperial.ac.uk)
+# Script: control_flow.R
+# Created: Oct 2020
+#
+# Script demonstrates the use of control flow in R
+
 ## if statements ##
 
 a <- TRUE
@@ -9,7 +15,9 @@ if (a == TRUE) {
 
 # writing an if statement in one line
 z <- runif(1) ## Generate a uniformly distributed random number
-if (z <= 0.5) {print("Less than a half")}
+if (z <= 0.5) {
+    print("Less than a half")
+    }
 
 # code readability is important, so avoid squeezing control flow blocks into a
 # single line
@@ -39,5 +47,5 @@ for (i in v1) {
 i <- 0
 while (i < 10) {
     i <- i + 1
-    print(i^2)
+    print(i ^ 2)
 }

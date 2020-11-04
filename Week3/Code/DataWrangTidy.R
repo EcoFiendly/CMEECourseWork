@@ -1,9 +1,12 @@
+# Author: Yewshen Lim (y.lim20@imperial.ac.uk)
+# Script: DataWrangTidy.R
+# Created: Oct 2020
+#
+# Script uses dplyr and tidyr to wrangle the Pound Hill Dataset
+
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
-
-# Author: Yewshen Lim 'y.lim20@imperial.ac.uk'
-# version: 0.0.1
 
 require(dplyr)
 require(tidyr)
@@ -38,15 +41,16 @@ colnames(TempData) <- MyData[1, ] # assign column names from original data
 ############# Convert from wide to long format  ###############
 
 # using dplyr
-MyWrangledData <- TempData %>% gather(Species, Count, -Cultivation, -Block,
-    -Plot, -Quadrat)
+MyWrangledData <- TempData %>% 
+    gather(Species, Count, -Cultivation, -Block, -Plot, -Quadrat)
 
 # set Cultivation, Block, Plot, Quadrat columns as factors and count as numeric
-MyWrangledData <- MyWrangledData %>% mutate(Cultivation = factor(Cultivation),
-    Block = factor(Block),
-    Plot = factor(Plot),
-    Quadrat = factor(Quadrat),
-    Count = as.integer(Count))
+MyWrangledData <- MyWrangledData %>%
+    mutate(Cultivation = factor(Cultivation),
+           Block = factor(Block),
+           Plot = factor(Plot),
+           Quadrat = factor(Quadrat),
+           Count = as.integer(Count))
 
 dplyr::glimpse(MyWrangledData)
 head(MyWrangledData)

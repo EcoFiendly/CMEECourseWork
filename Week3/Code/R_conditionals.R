@@ -1,3 +1,9 @@
+# Author: Yewshen Lim (y.lim20@imperial.ac.uk)
+# Script: R_conditionals.R
+# Created: Oct 2020
+#
+# Script demonstrates the use of conditionals
+
 # Checks if an integer is even
 is.even <- function(n=2) {
     if (n %% 2 == 0) {

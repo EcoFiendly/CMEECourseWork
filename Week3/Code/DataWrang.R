@@ -1,3 +1,9 @@
+# Author: Yewshen Lim (y.lim20@imperial.ac.uk)
+# Script: DataWrang.R
+# Created: Oct 2020
+#
+# Script uses base R packages to wrangle the Pound Hill Dataset
+
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
