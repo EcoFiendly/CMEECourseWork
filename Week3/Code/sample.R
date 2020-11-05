@@ -75,5 +75,5 @@ print(system.time(loopy_sample3(popn, n, num)))
 print("The vectorized lapply apporach takes:")
 print(system.time(lapply_sample(popn, n, num)))
 
-print("Tthe vectorized sapply approach takes:")
+print("The vectorized sapply approach takes:")
 print(system.time(sapply_sample(popn, n, num)))

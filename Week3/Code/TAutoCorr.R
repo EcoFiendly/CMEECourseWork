@@ -19,7 +19,7 @@ load("../Data/KeyWestAnnualMeanTemperature.RData")
 ls.str(ats)
 
 # plot
-tiff("../Results/TACplot1.tif", compression = "lzw")
+pdf("../Results/TACplot1.pdf")
 plot(ats$Year, ats$Temp,
     xlab = "Year",
     ylab = "Temp (Degrees celcius)",
@@ -45,7 +45,7 @@ for (i in 1:10000) {
 }
 
 # histogram to compare coefficient correlations
-tiff("../Results/TACplot2.tif", compression = "lzw")
+pdf("../Results/TACplot2.pdf")
 hist(ccS, xlim = c(-0.4, 0.4),
     xlab = "Correlation coefficients of random sample",
     main = NULL)

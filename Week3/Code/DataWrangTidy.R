@@ -15,10 +15,10 @@ require(tidyr)
 
 ############# Load the dataset ###############
 # header = false because the raw data don't have real headers
-MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE))
+MyData <- as.matrix(read.csv("../Data/PoundHillData.csv", header = FALSE))
 
 # header = true because we do have metadata headers
-MyMetaData <- read.csv("../data/PoundHillMetaData.csv", header = TRUE, sep = ";")
+MyMetaData <- read.csv("../Data/PoundHillMetaData.csv", header = TRUE, sep = ";")
 
 ############# Inspect the dataset ###############
 head(MyData)
