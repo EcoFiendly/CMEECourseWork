@@ -2,7 +2,9 @@
 # Script: control_flow.R
 # Created: Oct 2020
 #
-# Script demonstrates the use of control flow in R
+# Script illustrates the use of control flow in R
+
+rm(list = ls())
 
 ## if statements ##
 

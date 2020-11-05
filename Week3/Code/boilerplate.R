@@ -4,6 +4,8 @@
 #
 # A boilerplate R script
 
+rm(list = ls())
+
 MyFunction <- function(Arg1, Arg2) {
 
     # Statements involving Arg1, Arg2:

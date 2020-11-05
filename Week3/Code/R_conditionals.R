@@ -2,7 +2,9 @@
 # Script: R_conditionals.R
 # Created: Oct 2020
 #
-# Script demonstrates the use of conditionals
+# Script illustrates the use of conditionals
+
+rm(list = ls())
 
 # Checks if an integer is even
 is.even <- function(n=2) {

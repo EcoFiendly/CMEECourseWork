@@ -2,7 +2,9 @@
 # Script: next.R
 # Created: Oct 2020
 #
-# Script demonstrates the use of next
+# Script illustrates the use of next
+
+rm(list = ls())
 
 ## next ##
 

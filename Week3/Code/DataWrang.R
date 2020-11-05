@@ -4,6 +4,8 @@
 #
 # Script uses base R packages to wrangle the Pound Hill Dataset
 
+rm(list = ls())
+
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################

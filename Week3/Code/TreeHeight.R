@@ -2,8 +2,10 @@
 # Script: TreeHeight.R
 # Created: Oct 2020
 #
-# This function calculates heights of trees given distance of each tree from its
-# base and angle to its top, using the trigonometric formula
+# Script contains a function that calculates heights of trees given distance of
+# each tree from its base and angle to its top, using the trigonometric formula.
+# Script takes input, applies TreeHeight function and writes output to a csv
+# file in results
 #
 # height = distance * tan(radians)
 #
@@ -13,6 +15,8 @@
 #
 # OUTPUT
 # The heights of the tree, same units as "distance"
+
+rm(list = ls())
 
 # Read trees.csv file
 TreeData <- read.csv("../Data/trees.csv", header = TRUE)

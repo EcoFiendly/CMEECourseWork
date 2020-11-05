@@ -13,6 +13,8 @@
 # OUTPUT
 # density of population after a number of generations
 
+rm(list = ls())
+
 Ricker <- function(N0 = 1, r = 1, K = 10, generations = 50) {
     N <- rep(NA, generations) # creates a vector of NA
 

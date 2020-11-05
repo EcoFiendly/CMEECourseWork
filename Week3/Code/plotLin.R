@@ -5,6 +5,8 @@
 # This script demonstrates mathematical annotation on an axis and in the plot
 # area, and saves the resulting figure to the results directory
 
+rm(list = ls())
+
 require(ggplot2)
 
 x <- seq(0, 100, by = 0.1)

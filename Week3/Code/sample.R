@@ -2,8 +2,10 @@
 # Script: sample.R
 # Created: Oct 2020
 #
-# This script shows examples of how lapply and sapply work and also how to
+# This script illustrates how lapply and sapply work and also how to
 # sample random numbers
+
+rm(list = ls())
 
 ##### Functions #####
 

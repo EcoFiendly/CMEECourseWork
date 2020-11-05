@@ -2,7 +2,9 @@
 # Script: break.R
 # Created: Oct 2020
 #
-# Script demonstrates how to break out of a loop
+# Script illustrates how to break out of a loop
+
+rm(list = ls())
 
 ## breaking out of a loop ##
 

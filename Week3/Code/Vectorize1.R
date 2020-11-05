@@ -2,16 +2,19 @@
 # Script: Vectorize1.R
 # Created: Oct 2020
 #
-# This script demonstrates vectorization, where it is an apporach which directly
+# Script demonstrates vectorization, where it is an apporach which directly
 # applies compiled, optimized code to run an operation on a vector, matrix or a
 # higher-dimensional data structure (like an R array), instead of performing the
-# operation element-wise on the data structure
+# operation element-wise on the data structure. Script compares the speed
+# between the vectorized and non-vectorized functions.
 #
 # ARGUMENTS:
 # a vector, matrix or higher-dimensional data structure
 #
 # OUTPUT
 # time taken to sum with a written loop and sum with inbuilt sum()
+
+rm(list = ls())
 
 M <- matrix(runif(1000000), 1000, 1000)
 

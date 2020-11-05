@@ -2,10 +2,12 @@
 # Script: apply2.R
 # Created: Oct 2020
 #
-# SomeOperation takes an input v, if sum of v is greater than zero, it
-# multiplies that value by 100. So if v has positive and negative numbers, and
-# the sum comes out to be positive, only then does it multiply all the valus in
-# v by 100 and return them
+# Script contains a function SomeOperation, which takes an input v, if sum of v
+# is greater than zero, the function multiplies that value by 100. So if v has
+# positive and negative numbers, and the sum comes out to be positive, only then
+# does it multiply all the valus in v by 100 and return them
+
+rm(list = ls())
 
 SomeOperation <- function(v) {
     if (sum(v) > 0) {

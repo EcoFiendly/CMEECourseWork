@@ -5,6 +5,8 @@
 # This script plots the Girko's law simulation, and saves the resulting figure
 # to the results directory
 
+rm(list = ls())
+
 require(ggplot2)
 
 # function that returns an ellipse

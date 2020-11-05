@@ -2,7 +2,8 @@
 # Script: Vectorize2.R
 # Created: Oct 2020
 #
-# Runs the stochastic Ricker equation with gaussian fluctuations
+# This script runs the stochastic Ricker equation with gaussian fluctuations,
+# and the attempt to vectorize the function
 #
 # ARGUMENTS
 # p0 = initial population density

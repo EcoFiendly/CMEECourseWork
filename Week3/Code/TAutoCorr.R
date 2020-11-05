@@ -3,7 +3,8 @@
 # Created: Oct 2020
 #
 # This script calculates the correlation between n - 1 pairs of years, where n
-# is the total number of years
+# is the total number of years. Generates a plot of the data which is saved as a
+# pdf
 
 # clear out workspace
 rm(list = ls())
@@ -55,21 +56,3 @@ dev.off()
 # calculating the estimated p-value
 p_estimate <- sum(ccS > cc0) / 10000
 cat("The estimated p-value is", p_estimate)
-
-# This gives a different value because temp is correlated to year
-# cc1 <- cor(ats$Year, ats$Temp, method = "pearson")
-# cc1
-
-# sample_year <- function(vector) {
-#     randYear <- sample(vector, length(vector), replace = FALSE)
-#     return(cor(randYear, ats$Temp))
-# }
-
-# sapply_sample <- function(vector, num) {
-#     results <- sapply(1:num, function(i) sample_year(vector))
-#     # return(results)
-#     p_estimate = (sum(results > cc0)) / num
-#     return(p_estimate)
-# }
-
-# sapply_sample(ats$Year, 10000)

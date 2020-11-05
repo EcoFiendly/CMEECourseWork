@@ -2,7 +2,10 @@
 # Script: apply1.R
 # Created: Oct 2020
 #
-# This script applies the same function to rows/columns of a matrix
+# Script illustrates the use of apply to apply a function to rows/columns of a
+# matrix
+
+rm(list = ls())
 
 ## Build a random matrix
 M <- matrix(rnorm(100), 10, 10)

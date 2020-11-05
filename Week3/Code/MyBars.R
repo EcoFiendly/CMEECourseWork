@@ -5,6 +5,8 @@
 # This script demonstrates how to annotate a plot and saves the resulting figure
 # to the results directory
 
+rm(list = ls())
+
 require(ggplot2)
 
 a <- read.table("../Data/Results.txt", header = TRUE)

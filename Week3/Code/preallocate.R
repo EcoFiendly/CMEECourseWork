@@ -2,8 +2,10 @@
 # Script: preallocate.R
 # Created: Oct 2020
 #
-# This script demonstrates how preallocation speeds up a loop that resizes a
-# a vector repeatedly
+# Script illustrates how preallocation speeds up a loop that resizes a vector
+# repeatedly
+
+rm(list = ls())
 
 a <- NA
 nopreallo <- function(a) {

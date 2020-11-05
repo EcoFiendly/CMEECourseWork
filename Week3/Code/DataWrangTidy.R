@@ -4,6 +4,8 @@
 #
 # Script uses dplyr and tidyr to wrangle the Pound Hill Dataset
 
+rm(list = ls())
+
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
