@@ -4,7 +4,7 @@
 
 *Created: Week 3*
 
-This directory contains the scripts, data and results from week 2
+This directory contains the scripts, data and results from week 7
 
 Languages used in this week:
 1. R
