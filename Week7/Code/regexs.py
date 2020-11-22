@@ -91,7 +91,7 @@ match.group()
 MyStr = 'Samraat Pawar, s-pawar@imperial.ac.uk, Systems biology and \
     ecological theory'
 match = re.search(r"[\w\s]+,\s[\w\.@]+,\s[\w\s]+", MyStr)
-match.group()
+# match.group() # error because there are no matches
 
 match = re.search(r"[\w\s]+,\s[\w\.-]+@[\w\.-]+,\s[\w\s]+",MyStr)
 match.group()
