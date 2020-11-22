@@ -14,4 +14,5 @@ Each individual subdirectory will contain their own READMEs detailing the conten
 1. Week 1: UNIX and Linux, shell scripting, git and Latex
 2. Week 2: Biological Computing in Python
 3. Week 3: Biological Computing in R
+4. Week 7: Biological Computing in Python II
 
