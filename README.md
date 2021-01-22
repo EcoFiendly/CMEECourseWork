@@ -15,4 +15,4 @@ Each individual subdirectory will contain their own READMEs detailing the conten
 2. Week 2: Biological Computing in Python
 3. Week 3: Biological Computing in R
 4. Week 7: Biological Computing in Python II
-
+5. MiniProject
