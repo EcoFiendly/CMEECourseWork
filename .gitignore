@@ -3,6 +3,7 @@
 !README.md
 !.gitignore
 !/Code
+!MiniProject/Results/Plots
 
 # Blacklist
 *~
@@ -10,7 +11,7 @@
 #comment
 *.py[co]
 Sandbox
-Results
+*/Results/*
 .vscode
 *.pdf
 *~
@@ -24,3 +25,4 @@ Results
 Week2/Data/JustOaksData.csv
 Week2/Data/bodymass.csv
 Week3/Code/.Rhistory
+*.Rhistory
