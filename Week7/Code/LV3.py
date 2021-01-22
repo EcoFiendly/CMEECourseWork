@@ -10,23 +10,8 @@ __version__ = '0.0.1'
 
 # imports
 import numpy as np
-import scipy.integrate as integrate
 import matplotlib.pylab as p
 import sys
-
-# define time vector, integrate from time point 0 to 15, using 1000
-# sub-divisions of time
-# note that units of time are arbitrary here
-t = np.linspace(0, 15, 1000)
-
-# set initial conditions for two populations (10 resources and 5 consumers per 
-# unit area), and convert the two into an array (because our dCR_dt function
-# takes an array as input)
-R0 = 10
-C0 = 5
-
-# set K, which is the carrying capacity
-K = 33
 
 def main(r = 1.0, a = 0.1, z = 1.5, e = 0.75):
     """
@@ -48,20 +33,37 @@ def main(r = 1.0, a = 0.1, z = 1.5, e = 0.75):
         e (float): consumer's efficiency (a fraction) in converting 
                    resource to consumer biomass
     """
-    RC = np.zeros([len(t),2]) # preallocate list
-    RC[0, :] = np.array([R0, C0]) # fill the first row with starting conditions
 
+    # define time vector, integrate from time point 0 to 15, using 1000
+    # sub-divisions of time
+    # note that units of time are arbitrary here
+    t = np.linspace(0, 15, 1000)
+
+    # set initial conditions for two populations (10 resources and 5 consumers per 
+    # unit area), and convert the two into an array (because our dCR_dt function
+    # takes an array as input)
+    R0 = 10
+    C0 = 5
+
+    # set K, which is the carrying capacity
+    K = 33
+
+    # preallocate list
+    popu = np.zeros([len(t),2])
+    
     # discrete time version of LV model
-    for i in range(0, len(t) - 1):
-        # fill first column with R population at each time step
-        RC[i + 1, 0] = RC[i, 0] * (1 + r * (1 - RC[i, 0] / K) - a * RC[i, 1])
-        # fill second column with C population at each time step
-        RC[i + 1, 1] = RC[i, 1] * (1 - z + e * a * RC[i, 0])
+    for i in range(len(t)): 
+        # Looping through both columns at the same time
+        Rn = R0 * (1 + r * (1- R0/K) - a * C0)
+        Cn = C0 * (1 - z + e * a * R0)
+        R0 = Rn
+        C0 = Cn
+        popu[i,:]= [Rn,Cn]
     
     # visualize with matplotlib
     f1 = p.figure()
-    p.plot(t, RC[:,0], 'g-', label = "Resource density") # plot
-    p.plot(t, RC[:,1], 'b-', label = "Consumer density")
+    p.plot(t, popu[:,0], 'g-', label = "Resource density") # plot
+    p.plot(t, popu[:,1], 'b-', label = "Consumer density")
     p.grid()
     p.legend(loc = "best")
     p.xlabel("Time")
@@ -74,7 +76,7 @@ def main(r = 1.0, a = 0.1, z = 1.5, e = 0.75):
 
     # plot of Consumer density against Resource density
     f2 = p.figure()
-    p.plot(RC[:,0], RC[:,1], 'r-')
+    p.plot(popu[:,0], popu[:,1], 'r-')
     p.grid()
     p.xlabel("Resource density")
     p.ylabel("Consumer density")
@@ -85,5 +87,16 @@ def main(r = 1.0, a = 0.1, z = 1.5, e = 0.75):
     f2.savefig("../Results/LV_model3-1.pdf")
 
 if __name__ == "__main__":
-    main()
-    sys.exit()
+    if len(sys.argv) == 5:
+        # assign sys argvs to parameter values
+        r = float(sys.argv[1])
+        a = float(sys.argv[2])
+        z = float(sys.argv[3])
+        e = float(sys.argv[4])
+        # K = float(sys.argv[5])
+        main(r, a, z, e)
+        sys.exit()
+    else:
+        print("Lacking user inputs, using defaults")
+        main()
+        sys.exit()
