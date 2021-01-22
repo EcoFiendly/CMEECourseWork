@@ -154,7 +154,7 @@ Python version of Vectorize1.R
 
 Python version of Vectorize2.R
 
-### 3. `bashscript to compare speeds`
+### 3. `compare_Speed.sh`
 
 Script runs Vectorize 1 and 2 in both R and python for speed comparison
 
